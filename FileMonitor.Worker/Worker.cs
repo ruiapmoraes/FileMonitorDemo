@@ -82,6 +82,17 @@ namespace FileMonitor.Worker
             }
         }
 
+        public override async Task StopAsync(CancellationToken cancellationToken)
+        {
+            if (_watcher is not null)
+            {
+                _watcher.EnableRaisingEvents = false;
+            }
+
+            _fileQueue.Writer.TryComplete();
+            await base.StopAsync(cancellationToken);
+        }
+
         public override void Dispose()
         {
             _watcher?.Dispose();

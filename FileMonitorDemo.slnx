@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Itens de Solução/">
+    <File Path="C:/Temp/README.md" />
+  </Folder>
   <Folder Name="/src/">
     <Project Path="FileMonitor.Generator/FileMonitor.Generator.csproj" />
     <Project Path="FileMonitor.Worker/FileMonitor.Worker.csproj" />
